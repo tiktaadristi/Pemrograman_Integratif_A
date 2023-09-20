@@ -1,9 +1,9 @@
-# Praktikum 2 : CRUD MongoDB Compass dan Shell
+# Praktikum 3 : Integrasi MongoDB dan Express
 
 Langkah - langkah dan hasil Screenshot praktikum CRUD MongoDB Compass dan Shell.
-## MongoDB Compass
+## Percobaan instalasi NodeJS
 * ## Langkah 1 
-> Melakukan koneksi ke MongoDB menggunakan connection string <br /><br />
+>  Buka halaman <br /><br />
 ![Screenshot koneksi ke MongoDB](../Screenshoot/Modul2/1.png)
 
 * ## Langkah 2 
