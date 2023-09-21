@@ -29,12 +29,59 @@ command npm init -y
 * ## Langkah 3
 > Lakukan instalasi express, mongoose, dan dotenv dengan menggunakan command
 npm i express mongoose dotenv
-![Screenshot instalasi express, mongoose, dan dotenv (../Screenshoot/Modul3/4.PNG) 
+![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul3/4.PNG) 
+
+## Koneksi Express ke MongoDB
+* ## Langkah 1 
+>  Buatlah file index.js pada root folder dan masukkan kode di bawah ini <br /><br />
+<br> require('dotenv').config(); <br />
+<br>const express = require('express');<br />
+<br>const mongoose = require('mongoose');<br />
+<br>const app = express();<br />
+<br>app.use(express.json());<br />
+<br>app.get('/', (req, res) => {<br />
+<br>res.status(200).json({<br />
+<br>message: '<nama>,<nim>'<br />
+<br>})<br />
+<br>})<br />
+<br>const PORT = 8000;<br />
+<br>app.listen(PORT, () => {<br />
+<br>console.log(`Running on port ${PORT}`);<br />
+<br>})<br />
+
+> <br> Setelah itu coba jalankan aplikasi dengan command node index.js <br />
+![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/4.1.PNG)
+> ![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/4.2.PNG)
+
+* ## Langkah 2 
+>  Lakukan pembuatan file .env dan masukkan baris berikut <br /><br />
+![Screenshot jalankan node setup](../Screenshoot/Modul3/5.PNG)
+
+* ## Langkah 3 
+> Setelah instalasi selesai jalankan command node -v untuk memeriksa apakah
+NodeJS sudah terinstall
+> Setelah itu ubahlah kode pada listening port menjadi berikut dan coba jalankan aplikasi kembali
+> <br> const PORT = process.env.PORT || 8000; <br />
+<br> app.listen(PORT, () => { <br />
+<br> console.log(`Running on port ${PORT}`); <br />
+<br> }) <br />
+<br> MONGO_URI=<Connection string masing-masing> <br />
+![Screenshot jalankan command node -v ](../Screenshoot/Modul3/7.PNG)
 
 * ## Langkah 4
-> Melakukan insert buku “The Setting Sun” dan “Hujan” dengan insert many dengan
-menggunakan command db.books.insertMany(<data kalian>) , dan akan mengembalikan pesan sebagai berikut.
-![Screenshot insert buku many](../Screenshoot/Modul2/11.png)
+> Tambahkan baris kode berikut pada file index.js
+> <br> require('dotenv').config();  <br />
+<br> const express = require('express');  <br />
+<br> const mongoose = require('mongoose');  <br />
+<br> mongoose.connect(process.env.MONGO_URI);  <br />
+<br> const db = mongoose.connection;  <br />
+<br> db.on('error', (error) => {  <br />
+<br> console.log(error); <br />
+<br> }); <br />
+<br> db.once('connected', () => {  <br />
+<br> console.log('Mongo connected');  <br />
+<br> }) <br />
+![Screenshot insert buku many](../Screenshoot/Modul3/9.1.PNG)
 
 * ## Langkah 5
 > Melakukan pencarian buku dengan menggunakan command db.books.find() untuk
@@ -65,14 +112,10 @@ yang akan di update>}})
 db.books.deleteOne({<argument>})
 ![Screenshot delete buku](../Screenshoot/Modul2/16.png)
 
-* ## Langkah 9
+* ## Langkah 10
 > Melakukan penghapusan pada semua buku “Osamu Dazai dengan menggunakan
 command db.books.deleteMany({<argument>})
 ![Screenshot delete buku](../Screenshoot/Modul2/17.png)
-
-
-
-
 
 
 
