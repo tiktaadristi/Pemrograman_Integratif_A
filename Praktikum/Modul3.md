@@ -8,28 +8,28 @@ Langkah - langkah dan hasil Screenshot praktikum CRUD MongoDB Compass dan Shell.
 
 * ## Langkah 2 
 > Download dan jalankan node setup <br /><br />
-![Screenshot membuat database](../Screenshoot/Modul3/1.PNG)
+![Screenshot jalankan node setup](../Screenshoot/Modul3/1.PNG)
 
 * ## Langkah 3 
 > Setelah instalasi selesai jalankan command node -v untuk memeriksa apakah
 NodeJS sudah terinstall
-![Screenshot insert buku pertama](../Screenshoot/Modul3/2.png)
+![Screenshot jalankan command node -v ](../Screenshoot/Modul3/2.PNG)
 
 ## Inisiasi project Express dan pemasangan package
 * ## Langkah 1
 >  Lakukan pembuatan folder dengan nama express-mongodb dan masuk ke dalam
 folder tersebut lalu buka melalui text editor masing-masing
-![Screenshot koneksi MongoDB](../Screenshoot/Modul3/2.2.PNG)
+![Screenshot pembuatan folder](../Screenshoot/Modul3/2.2.PNG)
 
 * ## Langkah 2
 > Lakukan npm init untuk mengenerate file package.json dengan menggunakan
 command npm init -y
-![Screenshot melihat list database](../Screenshoot/Modul2/3.PNG)
+![Screenshot npm init -](../Screenshoot/Modul3/3.PNG)
 
 * ## Langkah 3
 > Lakukan instalasi express, mongoose, dan dotenv dengan menggunakan command
 npm i express mongoose dotenv
-![Screenshot insert buku Overlord I](../Screenshoot/Modul2/10.png)
+![Screenshot instalasi express, mongoose, dan dotenv (../Screenshoot/Modul3/4.PNG) 
 
 * ## Langkah 4
 > Melakukan insert buku “The Setting Sun” dan “Hujan” dengan insert many dengan
