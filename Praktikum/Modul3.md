@@ -48,10 +48,9 @@ npm i express mongoose dotenv
 <br>app.listen(PORT, () => {<br />
 <br>console.log(`Running on port ${PORT}`);<br />
 <br>})<br />
-
 > <br> Setelah itu coba jalankan aplikasi dengan command node index.js <br />
 ![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/4.1.PNG)
-> ![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/4.2.PNG)
+![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/4.2.PNG)
 
 * ## Langkah 2 
 >  Lakukan pembuatan file .env dan masukkan baris berikut <br /><br />
