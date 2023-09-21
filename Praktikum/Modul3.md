@@ -3,59 +3,32 @@
 Langkah - langkah dan hasil Screenshot praktikum CRUD MongoDB Compass dan Shell.
 ## Percobaan instalasi NodeJS
 * ## Langkah 1 
->  Buka halaman <br /><br />
-![Screenshot koneksi ke MongoDB](../Screenshoot/Modul2/1.png)
+>  Buka halaman https://nodejs.org/en/ <br /><br />
+![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/1.1.PNG)
 
 * ## Langkah 2 
-> Membuat database dengan melakukan klik “Create Database” <br /><br />
-![Screenshot membuat database](../Screenshoot/Modul2/2.png)
+> Download dan jalankan node setup <br /><br />
+![Screenshot membuat database](../Screenshoot/Modul3/1.PNG)
 
 * ## Langkah 3 
-> Melakuakan insert buku pertama dengan melakukan klik “Add Data”, pilih “Insert
-Document”, isi dengan data yang diinginkan dan klik “Insert”
-![Screenshot insert buku pertama](../Screenshoot/Modul2/3.png)
+> Setelah instalasi selesai jalankan command node -v untuk memeriksa apakah
+NodeJS sudah terinstall
+![Screenshot insert buku pertama](../Screenshoot/Modul3/2.png)
 
-* ## Langkah 4 
-> insert buku kedua dengan cara yang sama.
-![Screenshot insert buku kedua](../Screenshoot/Modul2/4.png)
-
-* ## Langkah 5
-> Melakukan pencarian buku dengan author “Osamu Dazai” dengan mengisi filter yang
-diinginkan dan klik “Find”
-![Screenshot pencarian buku](../Screenshoot/Modul2/5.png)
-
-* ## Langkah 6
-> Melakukan perubahan summary pada buku “No Longer Human” menjadi “Buku yang
-bagus (<NAMA>,<NIM>) dengan melakukan klik “Edit Document” (berlambang
-pensil), mengisi nilai summary yang baru, dan melakukan klik “Update”
-![Screenshot update buku](../Screenshoot/Modul2/6.png)
-
-* ## Langkah 7
-> Melakukan penghapusan pada buku “I Am a Cat” dengan melakukan klik “Remove
-Document” (berlambang tong sampah) dan melakukan klik “Delete”
-![Screenshot delete buku](../Screenshoot/Modul2/7.png)
-
-## MongoDB Shell
+## Inisiasi project Express dan pemasangan package
 * ## Langkah 1
-> Melakukan koneksi ke MongoDB Server dengan menjalankan command mongosh bagi
-yang menggunakan terminal build in OS sehingga tampilan terminal kalian akan
-menjadi seperti berikut
-![Screenshot koneksi MongoDB](../Screenshoot/Modul2/8.png)
+>  Lakukan pembuatan folder dengan nama express-mongodb dan masuk ke dalam
+folder tersebut lalu buka melalui text editor masing-masing
+![Screenshot koneksi MongoDB](../Screenshoot/Modul3/2.2.PNG)
 
 * ## Langkah 2
-> Melihat list database yang ada di server dengan menjalankan command
-show dbs
-> Untuk berpindah ke database “bookstore” gunakan command use bookstore , kalian
-dapat memastikan telah berpindah ke database yang benar dengan melihat tulisan
-sebelum tanda “>”
-> Melihat collection yang ada pada database tersebut dengan
-menggunakan command show collections
-![Screenshot melihat list database](../Screenshoot/Modul2/9.png)
+> Lakukan npm init untuk mengenerate file package.json dengan menggunakan
+command npm init -y
+![Screenshot melihat list database](../Screenshoot/Modul2/3.PNG)
 
 * ## Langkah 3
-> Melakukan insert buku “Overlord I” dengan menggunakan command
-db.books.insertOne(<data kalian>) , setelah insert buku berhasil maka MongoDB akan
-mengembalikan pesan sebagai berikut.
+> Lakukan instalasi express, mongoose, dan dotenv dengan menggunakan command
+npm i express mongoose dotenv
 ![Screenshot insert buku Overlord I](../Screenshoot/Modul2/10.png)
 
 * ## Langkah 4
