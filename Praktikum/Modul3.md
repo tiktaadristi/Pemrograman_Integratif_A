@@ -50,7 +50,6 @@ npm i express mongoose dotenv
 <br>})<br />
 > <br> Setelah itu coba jalankan aplikasi dengan command node index.js <br />
 ![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/4.1.PNG)
-![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/4.2.PNG)
 
 * ## Langkah 2 
 >  Lakukan pembuatan file .env dan masukkan baris berikut <br /><br />
@@ -82,16 +81,192 @@ NodeJS sudah terinstall
 <br> }) <br />
 ![Screenshot insert buku many](../Screenshoot/Modul3/9.1.PNG)
 
+## Pembuatan routing
+* ## Langkah 1 
+>  Lakukan pembuatan direktori routes di tingkat yang sama dengan index.js <br /><br />
+![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/9.2.PNG)
+
+* ## Langkah 2 
+>   Buatlah file book.route.js di dalamnya <br /><br />
+![Screenshot jalankan node setup](../Screenshoot/Modul3/9.3.PNG)
+
+* ## Langkah 3 
+> Tambahkan baris kode berikut untuk fungsi getAllBooks
+<br>const router = require('express').Router(); <br />
+<br>router.get('/', function getAllBooks(req, res) { <br />
+<br>res.status(200).json({ <br />
+<br>message: 'mendapatkan semua buku' <br />
+<br>}) <br />
+<br>}) <br />
+<br>module.exports = router; <br />
+![Screenshot jalankan command node -v ](../Screenshoot/Modul3/9.PNG)
+
+* ## Langkah 4
+> Lakukan hal yang sama untuk getOneBook, createBook, updateBook, dan
+deleteBook
+> <br> const router = require('express').Router();
+ <br>...
+ <br>router.get('/:id', function getOneBook(req, res) {
+ <br>const id = req.params.id;
+ <br>res.status(200).json({
+ <br>message: 'mendapatkan satu buku',
+ <br>id,
+ <br>})
+ <br>})
+ <br>router.post('/', function createBook(req, res)
+ <br> res.status(200).json({
+ <br>message: 'membuat buku baru'
+ <br>})
+ <br>})
+ <br>router.put('/:id', function updateBook(req, res) {
+ <br>const id = req.params.id;
+ <br>res.status(200).json({
+ <br>message: 'memperbaharui satu buku',
+ <br>id,
+ <br>})
+ <br>})
+ <br>router.delete('/:id', function deleteBook(req, res) {
+ <br>const id = req.params.id;
+ <br>res.status(200).json({
+ <br>message: 'menghapus satu buku',
+ <br>id,
+ <br>})
+ <br>})
+ <br>module.exports = router { <br />
+![Screenshot insert buku many](../Screenshoot/Modul3/10.PNG)
 * ## Langkah 5
-> Melakukan pencarian buku dengan menggunakan command db.books.find() untuk
-melakukan pencarian semua buku.
-![Screenshot pencarian buku](../Screenshoot/Modul2/12.png)
+> Lakukan import book.route.js pada file index.js dan tambahkan baris kode berikut
+<br>require('dotenv').config();
+<br>const express = require('express');
+<br>const mongoose = require('mongoose');
+<br>const bookRoutes = require('./routes/book.route'); //
+<br>...
+<br>app.get('/', (req, res) => {
+<br>res.status(200).json({
+<br>message: ','
+<br>})
+<br>})
+<br>app.use('/books', bookRoutes); //
+<br>const PORT = process.env.PORT || 8000;
+<br>app.listen(PORT, () => {
+<br>console.log(Running on port ${PORT});
+<br>})
+![Screenshot pencarian buku](../Screenshoot/Modul3/11.PNG)
 
 * ## Langkah 6
-> Menampilkan seluruh buku dengan author “Osamu Dazai” dengan mengisi argument
-pada find() dengan menggunakan command db.books.find({<filter yang ingin
-diisi>})
-![Screenshot menampilkan seluruh buku](../Screenshoot/Modul2/13.png)
+>  Uji salah satu endpoint dengan Postman
+![Screenshot menampilkan seluruh buku](../Screenshoot/Modul3/13.PNG)
+
+## Pembuatan controller
+* ## Langkah 1 
+> Lakukan pembuatan direktori controllers di tingkat yang sama dengan index.js <br /><br />
+![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/14.1.PNG)
+
+* ## Langkah 2 
+>  Buatlah file book.controller.js di dalamnya <br /><br />
+![Screenshot jalankan node setup](../Screenshoot/Modul3/14.2.PNG)
+
+* ## Langkah 3 
+>  Salin baris kode dari routes untuk fungsi getAllBooks
+<br>cfunction getAllBooks(req, res) {
+res.status(200).json({
+message: 'mendapatkan semua buku'
+})
+};
+module.exports = {
+getAllBooks,
+} <br />
+![Screenshot jalankan command node -v ](../Screenshoot/Modul3/9.PNG)
+
+* ## Langkah 4
+> Lakukan hal yang sama untuk getOneBook, createBook, updateBook, dan
+deleteBook
+> <br> const router = require('express').Router();
+ <br>...
+ <br>router.get('/:id', function getOneBook(req, res) {
+ <br>const id = req.params.id;
+ <br>res.status(200).json({
+ <br>message: 'mendapatkan satu buku',
+ <br>id,
+ <br>})
+ <br>})
+ <br>router.post('/', function createBook(req, res)
+ <br> res.status(200).json({
+ <br>message: 'membuat buku baru'
+ <br>})
+ <br>})
+ <br>router.put('/:id', function updateBook(req, res) {
+ <br>const id = req.params.id;
+ <br>res.status(200).json({
+ <br>message: 'memperbaharui satu buku',
+ <br>id,
+ <br>})
+ <br>})
+ <br>router.delete('/:id', function deleteBook(req, res) {
+ <br>const id = req.params.id;
+ <br>res.status(200).json({
+ <br>message: 'menghapus satu buku',
+ <br>id,
+ <br>})
+ <br>})
+ <br>module.exports = router { <br />
+![Screenshot insert buku many](../Screenshoot/Modul3/10.PNG)
+* ## Langkah 5
+> Lakukan import book.route.js pada file index.js dan tambahkan baris kode berikut
+<br>require('dotenv').config();
+<br>const express = require('express');
+<br>const mongoose = require('mongoose');
+<br>const bookRoutes = require('./routes/book.route'); //
+<br>...
+<br>app.get('/', (req, res) => {
+<br>res.status(200).json({
+<br>message: ','
+<br>})
+<br>})
+<br>app.use('/books', bookRoutes); //
+<br>const PORT = process.env.PORT || 8000;
+<br>app.listen(PORT, () => {
+<br>console.log(Running on port ${PORT});
+<br>})
+![Screenshot pencarian buku](../Screenshoot/Modul3/11.PNG)
+
+* ## Langkah 6
+>  Uji salah satu endpoint dengan Postman
+![Screenshot menampilkan seluruh buku](../Screenshoot/Modul3/13.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 * ## Langkah 7
 > Melakukan perubahan summary pada buku “Hujan” menjadi “Buku yang bagus
