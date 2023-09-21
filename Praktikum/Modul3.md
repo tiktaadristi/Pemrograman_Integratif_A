@@ -397,8 +397,7 @@ deleteBook
 ![Screenshot delete buku](../Screenshoot/Modul3/27.PNG)
 
 * ## Langkah 10
-> Ubah judul buku Dilan 1991 menjadi “<NAMA PANGGILAN>" 1991” dengan
-Postman
+> Ubah judul buku Dilan 1991 menjadi "NAMA PANGGILAN" 1991" disini milik saya menjadi Tikta 1991 dengan Postman
 ![Screenshot delete buku](../Screenshoot/Modul3/29.PNG)
 
 * ## Langkah 11
