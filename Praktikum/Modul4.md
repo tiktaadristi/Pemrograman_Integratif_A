@@ -1,35 +1,56 @@
-# Praktikum 3 : Integrasi MongoDB dan Express
+# Praktikum  4 : Basic Routing dan Migration
 
-Langkah - langkah dan hasil Screenshot praktikum CRUD MongoDB Compass dan Shell.
-## Percobaan instalasi NodeJS
+Langkah-langkah dan hasil Screenshot praktikum  4 – Basic Routing dan Migration.
+## GET
 * ## Langkah 1 
->  Buka halaman https://nodejs.org/en/ <br /><br />
-![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/1.1.PNG)
+>  Untuk menambahkan endpoint dengan method GET pada aplikasi kita, kita dapat
+mengunjungi file web.php pada folder routes. Kemudian tambahkan baris ini pada akhir file
+<br> $router->get('/get', function () {<br />
+<br>  return 'GET';<br />
+<br> }); <br />
+![Screenshot Menambahkan enpoint method GET pada file web.php (routes)](../Screenshoot/Modul4/1.1.PNG)
 
 * ## Langkah 2 
-> Download dan jalankan node setup <br /><br />
-![Screenshot jalankan node setup](../Screenshoot/Modul3/1.PNG)
+> . Setelah itu coba jalankan aplikasi dengan command,
+> php -S localhost:8000 -t public <br /><br />
+![Screenshot jalankan server](../Screenshoot/Modul4/1.PNG)
 
 * ## Langkah 3 
-> Setelah instalasi selesai jalankan command node -v untuk memeriksa apakah
-NodeJS sudah terinstall
-![Screenshot jalankan command node -v ](../Screenshoot/Modul3/2.PNG)
+> Setelah aplikasi berhasil dijalankan, kita dapat membuka browser dengan url,
+http://localhost:8000/get, path yang akan kita akses akan berbentuk demikian,
+http://{BASE_URL}{PATH}, jika BASE_URL kita adalah localhost:8000 dan PATH kita
+adalah /get, maka url akan berbentuk seperti diatas.
+![Screenshot . Mencoba mengakses url http://localhost:8000/get sesuai endpoint yang telah ditambahkan sebelumnya](../Screenshoot/Modul4/2.PNG)
 
-## Inisiasi project Express dan pemasangan package
+## POST, PUT, PATCH, DELETE, dan OPTIONS
 * ## Langkah 1
->  Lakukan pembuatan folder dengan nama express-mongodb dan masuk ke dalam
-folder tersebut lalu buka melalui text editor masing-masing
-![Screenshot pembuatan folder](../Screenshoot/Modul3/2.2.PNG)
+>  Sama halnya saat menambahkan method GET, kita dapat menambahkan methode POST, PUT, PATCH, DELETE, dan OPTIONS pada file web.php dengan code seperti ini
+> <br> $router->post('/post', function () { </br>
+<br> return 'POST'; </br>
+<br> }); </br>
+<br> $router->put('/put', function () { </br>
+<br> return 'PUT'; </br>
+<br> }); </br>
+<br> $router->patch('/patch', function () {
+ return 'PATCH'; </br>
+<br> }); </br>
+<br> $router->delete('/delete', function () {
+ return 'DELETE'; </br>
+<br> }); </br>
+<br> $router->options('/options', function () {
+ return 'OPTIONS'; </br>
+<br> }); </br>
+![Screenshot Menambahkan endpoint method POST, PUT, PATCH, DELETE, dan OPTIONS](../Screenshoot/Modul4/2.2.PNG)
 
 * ## Langkah 2
 > Lakukan npm init untuk mengenerate file package.json dengan menggunakan
 command npm init -y
-![Screenshot npm init -](../Screenshoot/Modul3/3.PNG)
+![Screenshot npm init -](../Screenshoot/Modul4/3.PNG)
 
 * ## Langkah 3
 > Lakukan instalasi express, mongoose, dan dotenv dengan menggunakan command
 npm i express mongoose dotenv
-![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul3/4.PNG) 
+![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/4.PNG) 
 
 ## Koneksi Express ke MongoDB
 * ## Langkah 1 
@@ -49,11 +70,11 @@ npm i express mongoose dotenv
 <br>console.log(`Running on port ${PORT}`);<br />
 <br>})<br />
 > <br> Setelah itu coba jalankan aplikasi dengan command node index.js <br />
-![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/4.1.PNG)
+![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul4/4.1.PNG)
 
 * ## Langkah 2 
 >  Lakukan pembuatan file .env dan masukkan baris berikut <br /><br />
-![Screenshot jalankan node setup](../Screenshoot/Modul3/5.PNG)
+![Screenshot jalankan node setup](../Screenshoot/Modul4/5.PNG)
 
 * ## Langkah 3 
 > Setelah instalasi selesai jalankan command node -v untuk memeriksa apakah
@@ -64,7 +85,7 @@ NodeJS sudah terinstall
 <br> console.log(`Running on port ${PORT}`); <br />
 <br> }) <br />
 <br> MONGO_URI=<Connection string masing-masing> <br />
-![Screenshot jalankan command node -v ](../Screenshoot/Modul3/7.PNG)
+![Screenshot jalankan command node -v ](../Screenshoot/Modul4/7.PNG)
 
 * ## Langkah 4
 > Tambahkan baris kode berikut pada file index.js
@@ -79,16 +100,16 @@ NodeJS sudah terinstall
 <br> db.once('connected', () => {  <br />
 <br> console.log('Mongo connected');  <br />
 <br> }) <br />
-![Screenshot insert buku many](../Screenshoot/Modul3/9.1.PNG)
+![Screenshot insert buku many](../Screenshoot/Modul4/9.1.PNG)
 
 ## Pembuatan routing
 * ## Langkah 1 
 >  Lakukan pembuatan direktori routes di tingkat yang sama dengan index.js <br /><br />
-![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/9.2.PNG)
+![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul4/9.2.PNG)
 
 * ## Langkah 2 
 >   Buatlah file book.route.js di dalamnya <br /><br />
-![Screenshot jalankan node setup](../Screenshoot/Modul3/9.3.PNG)
+![Screenshot jalankan node setup](../Screenshoot/Modul4/9.3.PNG)
 
 * ## Langkah 3 
 > Tambahkan baris kode berikut untuk fungsi getAllBooks
@@ -99,7 +120,7 @@ NodeJS sudah terinstall
 <br>}) <br />
 <br>}) <br />
 <br>module.exports = router; <br />
-![Screenshot jalankan command node -v ](../Screenshoot/Modul3/9.PNG)
+![Screenshot jalankan command node -v ](../Screenshoot/Modul4/9.PNG)
 
 * ## Langkah 4
 > Lakukan hal yang sama untuk getOneBook, createBook, updateBook, dan
@@ -133,7 +154,7 @@ deleteBook
  <br>}) <br />
  <br>}) <br />
  <br>module.exports = router { <br />
-![Screenshot insert buku many](../Screenshoot/Modul3/10.PNG)
+![Screenshot insert buku many](../Screenshoot/Modul4/10.PNG)
 * ## Langkah 5
 > Lakukan import book.route.js pada file index.js dan tambahkan baris kode berikut
 <br>require('dotenv').config(); <br />
@@ -151,20 +172,20 @@ deleteBook
 <br>app.listen(PORT, () => { <br />
 <br>console.log(Running on port ${PORT}); <br />
 <br>}) <br />
-![Screenshot pencarian buku](../Screenshoot/Modul3/11.PNG)
+![Screenshot pencarian buku](../Screenshoot/Modul4/11.PNG)
 
 * ## Langkah 6
 >  Uji salah satu endpoint dengan Postman
-![Screenshot menampilkan seluruh buku](../Screenshoot/Modul3/13.PNG)
+![Screenshot menampilkan seluruh buku](../Screenshoot/Modul4/13.PNG)
 
 ## Pembuatan controller
 * ## Langkah 1 
 > Lakukan pembuatan direktori controllers di tingkat yang sama dengan index.js <br /><br />
-![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/14.1.PNG)
+![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul4/14.1.PNG)
 
 * ## Langkah 2 
 >  Buatlah file book.controller.js di dalamnya <br /><br />
-![Screenshot jalankan node setup](../Screenshoot/Modul3/14.2.PNG)
+![Screenshot jalankan node setup](../Screenshoot/Modul4/14.2.PNG)
 
 * ## Langkah 3 
 >  Salin baris kode dari routes untuk fungsi getAllBooks
@@ -176,7 +197,7 @@ deleteBook
 <br>module.exports = { <br />
 <br>getAllBooks,  <br />
 <br>}  <br />
-![Screenshot jalankan command node -v ](../Screenshoot/Modul3/14.PNG)
+![Screenshot jalankan command node -v ](../Screenshoot/Modul4/14.PNG)
 
 * ## Langkah 4
 >  Lakukan hal yang sama untuk getOneBook, createBook, updateBook, dan
@@ -215,13 +236,13 @@ deleteBook
  <br> deleteBook //<br />
  <br> }<br />
  <br /><br />
-![Screenshot insert buku many](../Screenshoot/Modul3/15.PNG)
+![Screenshot insert buku many](../Screenshoot/Modul4/15.PNG)
 * ## Langkah 5
 > Lakukan import book.controller.js pada file book.route.js
 <br>const router = require('express').Router();<br />
 <br>const book = require('../controllers/book.controller');;<br />
 <br>module.exports = router;<br />
-![Screenshot pencarian buku](../Screenshoot/Modul3/15.1.PNG)
+![Screenshot pencarian buku](../Screenshoot/Modul4/15.1.PNG)
 
 * ## Langkah 6
 >   Lakukan perubahan pada fungsi agar dapat memanggil fungsi dari book.controller.js
@@ -233,15 +254,15 @@ deleteBook
 <br> router.put('/:id', book.updateBook);         <br />
 <br>router.delete('/:id', book.deleteBook);          <br />
 <br> module.exports = router; <br />
-![Screenshot menampilkan seluruh buku](../Screenshoot/Modul3/15.2.PNG)
+![Screenshot menampilkan seluruh buku](../Screenshoot/Modul4/15.2.PNG)
 ## Pembuatan model
 * ## Langkah 1 
 >Lakukan pembuatan direktori models di tingkat yang sama dengan index.js <br />
-![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/16.1.PNG)
+![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul4/16.1.PNG)
 
 * ## Langkah 2 
 > Buatlah file book.model.js di dalamnya <br />
-![Screenshot jalankan node setup](../Screenshoot/Modul3/16.2.PNG)
+![Screenshot jalankan node setup](../Screenshoot/Modul4/16.2.PNG)
 
 * ## Langkah 3 
 > Tambahkan baris kode berikut sesuai dengan tabel di atas
@@ -267,16 +288,16 @@ deleteBook
 <br>}<br />
 <br>})<br />
 <br>module.exports = mongoose.model('book', bookSchema); <br />
-![Screenshot jalankan command node -v ](../Screenshoot/Modul3/16.PNG)
+![Screenshot jalankan command node -v ](../Screenshoot/Modul4/16.PNG)
 ## Operasi CRUD
 * ## Langkah 1 
 > Hapus semua data pada collection books <br /><br />
-![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/17.PNG)
+![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul4/17.PNG)
 
 * ## Langkah 2 
 >  Hapus semua data pada collection books <br />
 <br>const Book = require('../models/book.model');<br />
-![Screenshot jalankan node setup](../Screenshoot/Modul3/18.PNG)
+![Screenshot jalankan node setup](../Screenshoot/Modul4/18.PNG)
 
 * ## Langkah 3 
 >  Lakukan perubahan pada fungsi createBook
@@ -304,7 +325,7 @@ deleteBook
 <br>})<br />
 <br>}<br />
 <br>}<br />
-![Screenshot jalankan command node -v ](../Screenshoot/Modul3/19.PNG)
+![Screenshot jalankan command node -v ](../Screenshoot/Modul4/19.PNG)
 
 * ## Langkah 4
 >   Buatlah dua buah buku dengan data di bawah ini dengan Postman
@@ -324,8 +345,8 @@ deleteBook
 <br>"summary": "Watashi ga kare o aishite iru to ittara",<br />
 <br>"publisher": "Pastel Books"<br />
 <br>}<br />
-![Screenshot insert buku many](../Screenshoot/Modul3/20.PNG)
-![Screenshot insert buku many](../Screenshoot/Modul3/21.PNG)
+![Screenshot insert buku many](../Screenshoot/Modul4/20.PNG)
+![Screenshot insert buku many](../Screenshoot/Modul4/21.PNG)
 * ## Langkah 5
 >  Lakukan perubahan pada fungsi getAllBooks
 <br>const Book = require('../models/book.model'); <br />
@@ -343,7 +364,7 @@ deleteBook
 <br>})<br />
 <br>}<br />
 <br>}<br />
-![Screenshot pencarian buku](../Screenshoot/Modul3/22.PNG)
+![Screenshot pencarian buku](../Screenshoot/Modul4/22.PNG)
 
 * ## Langkah 6
 > Lakukan perubahan pada fungsi getOneBook
@@ -363,15 +384,15 @@ deleteBook
 <br> })<br />
 <br> }<br />
 <br> }<br /><br />
-![Screenshot menampilkan seluruh buku](../Screenshoot/Modul3/23.PNG)
+![Screenshot menampilkan seluruh buku](../Screenshoot/Modul4/23.PNG)
 
 * ## Langkah 7
 > Tampilkan semua buku dengan Postman
-![Screenshot update buku](../Screenshoot/Modul3/24.PNG)
+![Screenshot update buku](../Screenshoot/Modul4/24.PNG)
 
 * ## Langkah 8
 >  Tampilkan buku Dilan 1990 dengan Postman
-![Screenshot update buku](../Screenshoot/Modul3/25.PNG)
+![Screenshot update buku](../Screenshoot/Modul4/25.PNG)
 
 * ## Langkah 9
 > Lakukan perubahan pada fungsi updateBook
@@ -394,11 +415,11 @@ deleteBook
 <br>})<br />
 <br>}<br />
 <br>}<br />
-![Screenshot delete buku](../Screenshoot/Modul3/27.PNG)
+![Screenshot delete buku](../Screenshoot/Modul4/27.PNG)
 
 * ## Langkah 10
 > Ubah judul buku Dilan 1991 menjadi "NAMA PANGGILAN" 1991" disini milik saya menjadi Tikta 1991 dengan Postman
-![Screenshot delete buku](../Screenshoot/Modul3/29.PNG)
+![Screenshot delete buku](../Screenshoot/Modul4/29.PNG)
 
 * ## Langkah 11
 > Lakukan perubahan pada fungsi deleteBook
@@ -418,11 +439,11 @@ deleteBook
 <br>})<br />
 <br>}<br />
 <br>}<br />
-![Screenshot delete buku](../Screenshoot/Modul3/30.PNG)
+![Screenshot delete buku](../Screenshoot/Modul4/30.PNG)
 
 * ## Langkah 12
 > Hapus buku Dilan 1990 dengan Postman
-![Screenshot delete buku](../Screenshoot/Modul3/32.PNG)
+![Screenshot delete buku](../Screenshoot/Modul4/32.PNG)
 
 
 
