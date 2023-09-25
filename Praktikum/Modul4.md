@@ -8,19 +8,19 @@ mengunjungi file web.php pada folder routes. Kemudian tambahkan baris ini pada a
 <br> $router->get('/get', function () {<br />
 <br>  return 'GET';<br />
 <br> }); <br />
-![Screenshot Menambahkan enpoint method GET pada file web.php (routes)](../Screenshoot/Modul4/1.1.PNG)
+![Screenshot Menambahkan enpoint method GET pada file web.php (routes)](../Screenshoot/Modul4/1.PNG)
 
 * ## Langkah 2 
-> . Setelah itu coba jalankan aplikasi dengan command,
+> Setelah itu coba jalankan aplikasi dengan command,
 > php -S localhost:8000 -t public <br /><br />
-![Screenshot jalankan server](../Screenshoot/Modul4/1.PNG)
+![Screenshot jalankan server](../Screenshoot/Modul4/2.PNG)
 
 * ## Langkah 3 
 > Setelah aplikasi berhasil dijalankan, kita dapat membuka browser dengan url,
 http://localhost:8000/get, path yang akan kita akses akan berbentuk demikian,
 http://{BASE_URL}{PATH}, jika BASE_URL kita adalah localhost:8000 dan PATH kita
 adalah /get, maka url akan berbentuk seperti diatas.
-![Screenshot . Mencoba mengakses url http://localhost:8000/get sesuai endpoint yang telah ditambahkan sebelumnya](../Screenshoot/Modul4/2.PNG)
+![Screenshot . Mencoba mengakses url http://localhost:8000/get sesuai endpoint yang telah ditambahkan sebelumnya](../Screenshoot/Modul4/3.PNG)
 
 ## POST, PUT, PATCH, DELETE, dan OPTIONS
 * ## Langkah 1
@@ -40,19 +40,33 @@ adalah /get, maka url akan berbentuk seperti diatas.
 <br> $router->options('/options', function () {
  return 'OPTIONS'; </br>
 <br> }); </br>
-![Screenshot Menambahkan endpoint method POST, PUT, PATCH, DELETE, dan OPTIONS](../Screenshoot/Modul4/2.2.PNG)
+![Screenshot Menambahkan endpoint method POST, PUT, PATCH, DELETE, dan OPTIONS](../Screenshoot/Modul4/4.PNG)
 
 * ## Langkah 2
-> Lakukan npm init untuk mengenerate file package.json dengan menggunakan
-command npm init -y
-![Screenshot npm init -](../Screenshoot/Modul4/3.PNG)
+> Mengakses url http://localhost:8000/get pada Postman
+![Screenshot npm init -](../Screenshoot/Modul4/5.PNG)
 
 * ## Langkah 3
-> Lakukan instalasi express, mongoose, dan dotenv dengan menggunakan command
-npm i express mongoose dotenv
-![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/4.PNG) 
+> Mengakses url http://localhost:8000/post pada Postman
+![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/6.PNG) 
 
-## Koneksi Express ke MongoDB
+* ## Langkah 4
+> Mengakses url http://localhost:8000/put pada Postman
+![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/7.PNG) 
+
+* ## Langkah 5
+> Mengakses url http://localhost:8000/patch pada Postman
+![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/8.PNG) 
+
+* ## Langkah 6
+> Mengakses url http://localhost:8000/delete pada Postman
+![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/9.PNG) 
+
+* ## Langkah 7
+> Mengakses url http://localhost:8000/options pada Postman
+![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/10.PNG) 
+
+## Migrasi Database
 * ## Langkah 1 
 >  Buatlah file index.js pada root folder dan masukkan kode di bawah ini <br /><br />
 <br> require('dotenv').config(); <br />
