@@ -43,27 +43,27 @@ adalah /get, maka url akan berbentuk seperti diatas.
 ![Screenshot Menambahkan endpoint method POST, PUT, PATCH, DELETE, dan OPTIONS](../Screenshoot/Modul4/4.PNG)
 
 * ## Langkah 2
-> Mengakses url http://localhost:8000/get pada Postman
+> Mengakses url http://[::1]:8000/get pada Thunder Client
 ![Screenshot npm init -](../Screenshoot/Modul4/5.PNG)
 
 * ## Langkah 3
-> Mengakses url http://localhost:8000/post pada Postman
+> Mengakses url http://[::1]:8000/post pada Postman
 ![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/6.PNG) 
 
 * ## Langkah 4
-> Mengakses url http://localhost:8000/put pada Postman
+> Mengakses url http://[::1]:8000/put pada Postman
 ![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/7.PNG) 
 
 * ## Langkah 5
-> Mengakses url http://localhost:8000/patch pada Postman
+> Mengakses url http://[::1]:8000/patch pada Postman
 ![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/8.PNG) 
 
 * ## Langkah 6
-> Mengakses url http://localhost:8000/delete pada Postman
+> Mengakses url http://[::1]:8000/delete pada Postman
 ![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/9.PNG) 
 
 * ## Langkah 7
-> Mengakses url http://localhost:8000/options pada Postman
+> Mengakses url http://[::1]:8000/options pada Postman
 ![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul4/10.PNG) 
 
 ## Migrasi Database
