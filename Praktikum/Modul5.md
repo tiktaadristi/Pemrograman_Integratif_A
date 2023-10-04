@@ -7,12 +7,26 @@ Langkah-langkah dan hasil Screenshot praktikum 5 – Dynamic Route dan Middlewar
 <br> $router->get('/user/{id}', function ($id) { <br />
 <br>  return 'User Id = ' . $id; <br />
 <br> }); <br />
+$router->get('/post/{postId}/comments/{commentId}', function ($postId, $commentId) {
+return 'Post ID = ' . $postId . ' Comments ID = ' . $commentId;
+});
+> $router->get('/users[/{userId}]', function ($userId = null) {
+return $userId === null ? 'Data semua users' : 'Data user dengan id ' . $userId;
+});
 ![Screenshot . Menambahkan syntax dynamic route pada file web.php yang berfungsi
 untuk memanggil user berdasarkan ID yang dimasukkan](../Screenshoot/Modul5/1.PNG)
 
 * ## Langkah 2 
-> Setelah itu coba jalankan aplikasi dengan command,
-> php -S localhost:8000 -t public <br /><br />
+> Aliases Route digunakan untuk memberi nama pada route yang telah kita buat, hal ini dapat membantu kita, saat kita ingin memanggil route tersebut pada aplikasi kita. Berikut syntax
+untuk menambahkan aliases route
+ <br /><br />
+ $router->get('/auth/login', ['as' => 'route.auth.login', function (...) {...}])
+...
+$router->get('/profile', function (Request $request) {
+if ($request->isLoggedIn) {
+return redirect()->route('route.auth.login');
+}
+});
 ![Screenshot jalankan server](../Screenshoot/Modul5/2.PNG)
 
 * ## Langkah 3 
