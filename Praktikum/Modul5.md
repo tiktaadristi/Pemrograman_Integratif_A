@@ -45,7 +45,8 @@ $router->get('/auth/login', ['as' => 'route.auth.login', function (...) {...}])
 ![](../Screenshoot/Modul5/2.PNG)
 ![](../Screenshoot/Modul5/2.1.PNG)
 ![](../Screenshoot/Modul5/2.3.PNG)
-<br>Mengakses endpoint /profile pada Postman. Karena pada langkah sebelumnya telah diatur menjadi false, maka routes tidak mengembalikan nilai apa-apa.
+<br>Mengakses endpoint /profile pada Postman.
+<br>Karena pada langkah sebelumnya telah diatur menjadi false, maka routes tidak mengembalikan nilai apa-apa.
 ![](../Screenshoot/Modul5/2.4.PNG)
 <br>Menambahkan syntax aliases route pada file web.php dan mengubah kondisinya menjadi true.
 ![](../Screenshoot/Modul5/2.5.PNG)
