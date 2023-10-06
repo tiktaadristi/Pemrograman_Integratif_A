@@ -23,7 +23,7 @@ kode dibawah ini
 <br>$router->get('/users[/{userId}]', function ($userId = null) {
 <br>return $userId === null ? 'Data semua users' : 'Data user dengan id ' . $userId;
 <br>});
-![Menambahkan route](../Screenshoot/Modul5/1.PNG)
+<br>![](../Screenshoot/Modul5/1.PNG)
 ![](../Screenshoot/Modul5/1.1.PNG)
 ![](../Screenshoot/Modul5/1.2.PNG)
 ![](../Screenshoot/Modul5/1.2.1.PNG)
