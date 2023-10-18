@@ -7,24 +7,6 @@ Pastikan terdapat tabel users yang dibuat menggunakan migration pada bab sebelum
 
 ### Langkah 2
 Mengganti baris kode pada file app/Models/User.php seperti berikut. <br /><br />
-<?php
-namespace App\Models;
-use Illuminate\Database\Eloquent\Model;
-cla User extends Model
-{
-/**
-* The attributes that are ma aignable.
-*
-* @var array
-/
-protected $fillable = [ 'name', 'email', 'paword'];
-/**
-The attributes excluded from the model's JSON form.
-*
-* @var array
-*/
-protected $hidden = [];
-}
 ![ langkah 1](../Screenshoot/Modul6/2.PNG) <br /><br />
 
 ## Controller
