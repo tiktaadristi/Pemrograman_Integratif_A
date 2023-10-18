@@ -136,5 +136,5 @@ migrasi untuk tabel products<br />
 ![Screenshot menampilkan seluruh buku](../Screenshoot/Modul4/17.PNG)
 
 * ## Langkah 7
-> Tampilan tabel yang berhasil dibuat pada database lumenapi di phpmyadmin
+Tampilan tabel yang berhasil dibuat pada database lumenapi di phpmyadmin
 ![Screenshot menampilkan seluruh buku](../Screenshoot/Modul4/18.PNG)
