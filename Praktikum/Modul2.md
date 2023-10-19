@@ -93,7 +93,7 @@ db.books.deleteOne({<argument>})
 * ## Langkah 10
 Melakukan penghapusan pada semua buku “Osamu Dazai dengan menggunakan
 command db.books.deleteMany({<argument>})
-![Screenshot delete buku](../Screenshoot/Modul2/17.PNG)
+![Screenshot delete buku](../Screenshoot/Modul2/19.PNG)
 
 
 
