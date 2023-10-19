@@ -63,7 +63,7 @@ Setelah itu ubahlah kode pada listening port menjadi berikut dan coba jalankan a
 <br> app.listen(PORT, () => { <br />
 <br> console.log(`Running on port ${PORT}`); <br />
 <br> }) <br />
-<br> MONGO_URI=<Connection string masing-masing> <br />
+ MONGO_URI=<Connection string masing-masing> <br />
 ![Screenshot jalankan command node -v ](../Screenshoot/Modul3/7.PNG)
 
 * ## Langkah 4
@@ -78,7 +78,7 @@ Setelah itu ubahlah kode pada listening port menjadi berikut dan coba jalankan a
 <br> }); <br />
 <br> db.once('connected', () => {  <br />
 <br> console.log('Mongo connected');  <br />
-<br> }) <br />
+}) <br />
 ![Screenshot insert buku many](../Screenshoot/Modul3/9.1.PNG)
 
 ## Pembuatan routing
@@ -98,7 +98,7 @@ Buatlah file book.route.js di dalamnya <br /><br />
 <br>message: 'mendapatkan semua buku' <br />
 <br>}) <br />
 <br>}) <br />
-<br>module.exports = router; <br />
+module.exports = router; <br />
 ![Screenshot jalankan command node -v ](../Screenshoot/Modul3/9.PNG)
 
 * ## Langkah 4
@@ -132,7 +132,7 @@ deleteBook
  <br>id, <br />
  <br>}) <br />
  <br>}) <br />
- <br>module.exports = router { <br />
+module.exports = router { <br />
 ![Screenshot insert buku many](../Screenshoot/Modul3/10.PNG)
 * ## Langkah 5
 > Lakukan import book.route.js pada file index.js dan tambahkan baris kode berikut
@@ -150,7 +150,7 @@ deleteBook
 <br>const PORT = process.env.PORT || 8000; <br />
 <br>app.listen(PORT, () => { <br />
 <br>console.log(Running on port ${PORT}); <br />
-<br>}) <br />
+}) <br />
 ![Screenshot pencarian buku](../Screenshoot/Modul3/11.PNG)
 
 * ## Langkah 6
@@ -175,7 +175,7 @@ Buatlah file book.controller.js di dalamnya <br /><br />
 <br>}; <br />
 <br>module.exports = { <br />
 <br>getAllBooks,  <br />
-<br>}  <br />
+}  <br />
 ![Screenshot jalankan command node -v ](../Screenshoot/Modul3/14.PNG)
 
 * ## Langkah 4
@@ -214,13 +214,13 @@ deleteBook
  <br> updateBook, //<br />
  <br> deleteBook //<br />
  <br> }<br />
- <br /><br />
+
 ![Screenshot insert buku many](../Screenshoot/Modul3/15.PNG)
 * ## Langkah 5
 > Lakukan import book.controller.js pada file book.route.js
 <br>const router = require('express').Router();<br />
 <br>const book = require('../controllers/book.controller');;<br />
-<br>module.exports = router;<br />
+module.exports = router;<br />
 ![Screenshot pencarian buku](../Screenshoot/Modul3/15.1.PNG)
 
 * ## Langkah 6
@@ -232,7 +232,7 @@ deleteBook
 <br>router.post('/', book.createBook);          <br />
 <br> router.put('/:id', book.updateBook);         <br />
 <br>router.delete('/:id', book.deleteBook);          <br />
-<br> module.exports = router; <br />
+ module.exports = router; <br />
 ![Screenshot menampilkan seluruh buku](../Screenshoot/Modul3/15.2.PNG)
 ## Pembuatan model
 * ## Langkah 1 
@@ -266,7 +266,7 @@ Buatlah file book.model.js di dalamnya <br />
 <br>type: String<br />
 <br>}<br />
 <br>})<br />
-<br>module.exports = mongoose.model('book', bookSchema); <br />
+module.exports = mongoose.model('book', bookSchema); <br />
 ![Screenshot jalankan command node -v ](../Screenshoot/Modul3/16.PNG)
 ## Operasi CRUD
 * ## Langkah 1 
@@ -275,7 +275,7 @@ Hapus semua data pada collection books <br /><br />
 
 * ## Langkah 2 
 >  Hapus semua data pada collection books <br />
-<br>const Book = require('../models/book.model');<br />
+const Book = require('../models/book.model');<br />
 ![Screenshot jalankan node setup](../Screenshoot/Modul3/18.PNG)
 
 * ## Langkah 3 
@@ -303,7 +303,7 @@ Hapus semua data pada collection books <br /><br />
 <br>error: error.message,<br />
 <br>})<br />
 <br>}<br />
-<br>}<br />
+}<br />
 ![Screenshot jalankan command node -v ](../Screenshoot/Modul3/19.PNG)
 
 * ## Langkah 4
@@ -323,7 +323,7 @@ Hapus semua data pada collection books <br /><br />
 <br>"pages": 344,<br />
 <br>"summary": "Watashi ga kare o aishite iru to ittara",<br />
 <br>"publisher": "Pastel Books"<br />
-<br>}<br />
+}<br />
 ![Screenshot insert buku many](../Screenshoot/Modul3/20.PNG)
 ![Screenshot insert buku many](../Screenshoot/Modul3/21.PNG)
 * ## Langkah 5
@@ -342,7 +342,7 @@ Hapus semua data pada collection books <br /><br />
 <br>error: error.message,<br />
 <br>})<br />
 <br>}<br />
-<br>}<br />
+}<br />
 ![Screenshot pencarian buku](../Screenshoot/Modul3/22.PNG)
 
 * ## Langkah 6
@@ -362,7 +362,7 @@ Hapus semua data pada collection books <br /><br />
 <br> error: error.message,<br />
 <br> })<br />
 <br> }<br />
-<br> }<br /><br />
+ }<br /><br />
 ![Screenshot menampilkan seluruh buku](../Screenshoot/Modul3/23.PNG)
 
 * ## Langkah 7
@@ -393,7 +393,7 @@ Tampilkan buku Dilan 1990 dengan Postman
 <br>error: error.message,<br />
 <br>})<br />
 <br>}<br />
-<br>}<br />
+}<br />
 ![Screenshot delete buku](../Screenshoot/Modul3/27.PNG)
 
 * ## Langkah 10
@@ -417,7 +417,7 @@ Ubah judul buku Dilan 1991 menjadi "NAMA PANGGILAN" 1991" disini milik saya menj
 <br>error: error.message,<br />
 <br>})<br />
 <br>}<br />
-<br>}<br />
+}<br />
 ![Screenshot delete buku](../Screenshoot/Modul3/30.PNG)
 
 * ## Langkah 12
