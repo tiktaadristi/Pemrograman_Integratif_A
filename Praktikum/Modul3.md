@@ -3,37 +3,37 @@
 Langkah - langkah dan hasil Screenshot praktikum CRUD MongoDB Compass dan Shell.
 ## Percobaan instalasi NodeJS
 * ## Langkah 1 
->  Buka halaman https://nodejs.org/en/ <br /><br />
+Buka halaman https://nodejs.org/en/ <br /><br />
 ![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/1.1.PNG)
 
 * ## Langkah 2 
-> Download dan jalankan node setup <br /><br />
+Download dan jalankan node setup <br /><br />
 ![Screenshot jalankan node setup](../Screenshoot/Modul3/1.PNG)
 
 * ## Langkah 3 
-> Setelah instalasi selesai jalankan command node -v untuk memeriksa apakah
+Setelah instalasi selesai jalankan command node -v untuk memeriksa apakah
 NodeJS sudah terinstall
 ![Screenshot jalankan command node -v ](../Screenshoot/Modul3/2.PNG)
 
 ## Inisiasi project Express dan pemasangan package
 * ## Langkah 1
->  Lakukan pembuatan folder dengan nama express-mongodb dan masuk ke dalam
+Lakukan pembuatan folder dengan nama express-mongodb dan masuk ke dalam
 folder tersebut lalu buka melalui text editor masing-masing
 ![Screenshot pembuatan folder](../Screenshoot/Modul3/2.2.PNG)
 
 * ## Langkah 2
-> Lakukan npm init untuk mengenerate file package.json dengan menggunakan
+Lakukan npm init untuk mengenerate file package.json dengan menggunakan
 command npm init -y
 ![Screenshot npm init -](../Screenshoot/Modul3/3.PNG)
 
 * ## Langkah 3
-> Lakukan instalasi express, mongoose, dan dotenv dengan menggunakan command
+Lakukan instalasi express, mongoose, dan dotenv dengan menggunakan command
 npm i express mongoose dotenv
 ![Screenshot instalasi express, mongoose, dan dotenv  ](../Screenshoot/Modul3/4.PNG) 
 
 ## Koneksi Express ke MongoDB
 * ## Langkah 1 
->  Buatlah file index.js pada root folder dan masukkan kode di bawah ini <br /><br />
+Buatlah file index.js pada root folder dan masukkan kode di bawah ini <br /><br />
 <br> require('dotenv').config(); <br />
 <br>const express = require('express');<br />
 <br>const mongoose = require('mongoose');<br />
@@ -48,17 +48,17 @@ npm i express mongoose dotenv
 <br>app.listen(PORT, () => {<br />
 <br>console.log(`Running on port ${PORT}`);<br />
 <br>})<br />
-> <br> Setelah itu coba jalankan aplikasi dengan command node index.js <br />
+<br> Setelah itu coba jalankan aplikasi dengan command node index.js <br />
 ![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/4.1.PNG)
 
 * ## Langkah 2 
->  Lakukan pembuatan file .env dan masukkan baris berikut <br /><br />
+Lakukan pembuatan file .env dan masukkan baris berikut <br /><br />
 ![Screenshot jalankan node setup](../Screenshoot/Modul3/5.PNG)
 
 * ## Langkah 3 
-> Setelah instalasi selesai jalankan command node -v untuk memeriksa apakah
+Setelah instalasi selesai jalankan command node -v untuk memeriksa apakah
 NodeJS sudah terinstall
-> Setelah itu ubahlah kode pada listening port menjadi berikut dan coba jalankan aplikasi kembali
+Setelah itu ubahlah kode pada listening port menjadi berikut dan coba jalankan aplikasi kembali
 > <br> const PORT = process.env.PORT || 8000; <br />
 <br> app.listen(PORT, () => { <br />
 <br> console.log(`Running on port ${PORT}`); <br />
@@ -83,11 +83,11 @@ NodeJS sudah terinstall
 
 ## Pembuatan routing
 * ## Langkah 1 
->  Lakukan pembuatan direktori routes di tingkat yang sama dengan index.js <br /><br />
+Lakukan pembuatan direktori routes di tingkat yang sama dengan index.js <br /><br />
 ![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/9.2.PNG)
 
 * ## Langkah 2 
->   Buatlah file book.route.js di dalamnya <br /><br />
+Buatlah file book.route.js di dalamnya <br /><br />
 ![Screenshot jalankan node setup](../Screenshoot/Modul3/9.3.PNG)
 
 * ## Langkah 3 
@@ -154,16 +154,16 @@ deleteBook
 ![Screenshot pencarian buku](../Screenshoot/Modul3/11.PNG)
 
 * ## Langkah 6
->  Uji salah satu endpoint dengan Postman
+  Uji salah satu endpoint dengan Postman
 ![Screenshot menampilkan seluruh buku](../Screenshoot/Modul3/13.PNG)
 
 ## Pembuatan controller
 * ## Langkah 1 
-> Lakukan pembuatan direktori controllers di tingkat yang sama dengan index.js <br /><br />
+Lakukan pembuatan direktori controllers di tingkat yang sama dengan index.js <br /><br />
 ![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/14.1.PNG)
 
 * ## Langkah 2 
->  Buatlah file book.controller.js di dalamnya <br /><br />
+Buatlah file book.controller.js di dalamnya <br /><br />
 ![Screenshot jalankan node setup](../Screenshoot/Modul3/14.2.PNG)
 
 * ## Langkah 3 
@@ -236,11 +236,11 @@ deleteBook
 ![Screenshot menampilkan seluruh buku](../Screenshoot/Modul3/15.2.PNG)
 ## Pembuatan model
 * ## Langkah 1 
->Lakukan pembuatan direktori models di tingkat yang sama dengan index.js <br />
+Lakukan pembuatan direktori models di tingkat yang sama dengan index.js <br />
 ![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/16.1.PNG)
 
 * ## Langkah 2 
-> Buatlah file book.model.js di dalamnya <br />
+Buatlah file book.model.js di dalamnya <br />
 ![Screenshot jalankan node setup](../Screenshoot/Modul3/16.2.PNG)
 
 * ## Langkah 3 
@@ -270,7 +270,7 @@ deleteBook
 ![Screenshot jalankan command node -v ](../Screenshoot/Modul3/16.PNG)
 ## Operasi CRUD
 * ## Langkah 1 
-> Hapus semua data pada collection books <br /><br />
+Hapus semua data pada collection books <br /><br />
 ![Screenshot halaman https://nodejs.org/en/](../Screenshoot/Modul3/17.PNG)
 
 * ## Langkah 2 
@@ -366,11 +366,11 @@ deleteBook
 ![Screenshot menampilkan seluruh buku](../Screenshoot/Modul3/23.PNG)
 
 * ## Langkah 7
-> Tampilkan semua buku dengan Postman
+Tampilkan semua buku dengan Postman
 ![Screenshot update buku](../Screenshoot/Modul3/24.PNG)
 
 * ## Langkah 8
->  Tampilkan buku Dilan 1990 dengan Postman
+Tampilkan buku Dilan 1990 dengan Postman
 ![Screenshot update buku](../Screenshoot/Modul3/25.PNG)
 
 * ## Langkah 9
@@ -397,7 +397,7 @@ deleteBook
 ![Screenshot delete buku](../Screenshoot/Modul3/27.PNG)
 
 * ## Langkah 10
-> Ubah judul buku Dilan 1991 menjadi "NAMA PANGGILAN" 1991" disini milik saya menjadi Tikta 1991 dengan Postman
+Ubah judul buku Dilan 1991 menjadi "NAMA PANGGILAN" 1991" disini milik saya menjadi Tikta 1991 dengan Postman
 ![Screenshot delete buku](../Screenshoot/Modul3/29.PNG)
 
 * ## Langkah 11
@@ -421,7 +421,7 @@ deleteBook
 ![Screenshot delete buku](../Screenshoot/Modul3/30.PNG)
 
 * ## Langkah 12
-> Hapus buku Dilan 1990 dengan Postman
+Hapus buku Dilan 1990 dengan Postman
 ![Screenshot delete buku](../Screenshoot/Modul3/32.PNG)
 
 
