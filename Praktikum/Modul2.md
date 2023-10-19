@@ -4,11 +4,11 @@ Langkah - langkah dan hasil Screenshot praktikum CRUD MongoDB Compass dan Shell.
 ## MongoDB Compass
 * ## Langkah 1 
 Melakukan koneksi ke MongoDB menggunakan connection string <br /><br />
-![Screenshot koneksi ke MongoDB](../Screenshoot/Modul2/1.PNG)
+![Screenshot koneksi ke MongoDB](../Screenshoot/Modul2/1.png)
 
 * ## Langkah 2 
 Membuat database dengan melakukan klik “Create Database” <br /><br />
-![Screenshot membuat database](../Screenshoot/Modul2/2.PNG)
+![Screenshot membuat database](../Screenshoot/Modul2/2.png)
 
 * ## Langkah 3 
 Melakuakan insert buku pertama dengan melakukan klik “Add Data”, pilih “Insert
@@ -88,12 +88,12 @@ Dazai” dengan menggunakan command db.books.updateMany({<filter>}, {$set: {<dat
 * ## Langkah 9
 Melakukan penghapusan pada buku “Overlord I” dengan menggunakan command
 db.books.deleteOne({<argument>})
-![Screenshot delete buku](../Screenshoot/Modul2/16.PNG)
+![Screenshot delete buku](../Screenshoot/Modul2/16.png)
 
 * ## Langkah 10
 Melakukan penghapusan pada semua buku “Osamu Dazai dengan menggunakan
 command db.books.deleteMany({<argument>})
-![Screenshot delete buku](../Screenshoot/Modul2/17.PNG)
+![Screenshot delete buku](../Screenshoot/Modul2/17.png)
 
 
 
