@@ -13,7 +13,7 @@ Membuat database dengan melakukan klik “Create Database” <br /><br />
 * ## Langkah 3 
 Melakuakan insert buku pertama dengan melakukan klik “Add Data”, pilih “Insert
 Document”, isi dengan data yang diinginkan dan klik “Insert”
-![Screenshot insert buku pertama](../Screenshoot/Modul2/823.PNG)
+![Screenshot insert buku pertama](../Screenshoot/Modul2/823.png)
 
 * ## Langkah 4
 insert buku kedua dengan cara yang sama.
@@ -88,12 +88,12 @@ Dazai” dengan menggunakan command db.books.updateMany({<filter>}, {$set: {<dat
 * ## Langkah 9
 Melakukan penghapusan pada buku “Overlord I” dengan menggunakan command
 db.books.deleteOne({<argument>})
-![Screenshot delete buku](../Screenshoot/Modul2/16.png)
+![Screenshot delete buku](../Screenshoot/Modul2/19.PNG)
 
 * ## Langkah 10
 Melakukan penghapusan pada semua buku “Osamu Dazai dengan menggunakan
 command db.books.deleteMany({<argument>})
-![Screenshot delete buku](../Screenshoot/Modul2/17.png)
+![Screenshot delete buku](../Screenshoot/Modul2/17.PNG)
 
 
 
