@@ -13,7 +13,7 @@ Membuat database dengan melakukan klik “Create Database” <br /><br />
 * ## Langkah 3 
 Melakuakan insert buku pertama dengan melakukan klik “Add Data”, pilih “Insert
 Document”, isi dengan data yang diinginkan dan klik “Insert”
-![Screenshot insert buku pertama](../Screenshoot/Modul2/3.PNG)
+![Screenshot insert buku pertama](../Screenshoot/Modul2/823.PNG)
 
 * ## Langkah 4
 insert buku kedua dengan cara yang sama.
