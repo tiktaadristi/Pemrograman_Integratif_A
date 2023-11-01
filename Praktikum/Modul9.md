@@ -1,10 +1,40 @@
-# Praktikum  8 : Register, Authentication dan Authorization
+# Praktikum  9 : JSON Web Token (JWT)
 
-Langkah-langkah dan hasil Screenshot praktikum  8 : Register, Authentication dan Authorization
-* ## Register
+Langkah-langkah dan hasil Screenshot praktikum 9 : JSON Web Token (JWT)
+* ## Penyesuaian Database
 * ### Langkah 1
-Pastikan terdapat tabel users yang dibuat menggunakan migration pada bab 3 Basic Routing dan Migration,</br>
+Lakukan perubahan pada length kolom token dengan menghapus parameter 72 di
+belakangnya/br>
 ![](../Screenshoot/Modul8/1.png)
+```
+<?php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+class AddColumnTokenToUsers extends Migration
+{
+ /**
+ * Run the migrations.
+ *
+ * @return void
+ */
+// from this
+public function up()
+ {
+ Schema::table('users', function (Blueprint $table) {
+ $table->string('token', 72)->unique()->nullable(); //
+ });
+ }
+// to this
+ public function up()
+ {
+ Schema::table('users', function (Blueprint $table) {
+ $table->string('token')->unique()->nullable();
+ });
+ }
+...
+}
+```
 * ### Langkah 2
 Pastikan terdapat model User.php yang digunakan pada bab 5 Model, Controller dan Request-Response Handler.
 ![](../Screenshoot/Modul8/2.png)
