@@ -36,21 +36,25 @@ public function up()
 }
 ```
 * ### Langkah 2
-Pastikan terdapat model User.php yang digunakan pada bab 5 Model, Controller dan Request-Response Handler.
+Jalankan perintah di bawah untuk memperbaharui migrasi dan menghapus data yang lama
+```
+php artisan migrate
+```
 ![](../Screenshoot/Modul8/2.png)
 * ### Langkah 3
-Membuat file AuthController.php
+Jalankan aplikasi pada endpoint /auth/register dengan body berikut.
+```
+{
+ "name": "Scaramouche",
+ "email": "scaramouche@fatui.org",
+ "password": "wanderer"
+}
+```
 ![](../Screenshoot/Modul8/3.png)
-* ### Langkah 4
-Menambahkan baris berikut pada routes/web.php
-![](../Screenshoot/Modul8/4.png)
-* ### Langkah 5
-Menjalankan aplikasi pada endpoint /auth/register
-![](../Screenshoot/Modul8/5.png)
 
-* ## Authentication
+* ## JWT Manual
 * ### Langkah 1
-Membuatfungsi login(Request $request) pada file AuthController.php
+
 ![](../Screenshoot/Modul8/6.png)
 * ### Langkah 2
 Menambahkan baris berikut pada routes/web.php
